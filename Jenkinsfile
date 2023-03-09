@@ -33,6 +33,7 @@ pipeline {
                 sh 'ls'
                 echo GIT_COMMIT
                 echo GIT_REPO_NAME
+                sh 'chmod +x gradlew'
               
                 script {
                     docker.withRegistry( 'https://index.docker.io/v1/', registryCredential ) {
